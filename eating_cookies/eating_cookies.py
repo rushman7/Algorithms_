@@ -3,21 +3,7 @@
 import sys
 
 def eating_cookies(n, cache=None):
-  if not cache:
-    cache = [0 for i in range(n+1)] # If cache has no value, default cache to an array of zeroes
-  
-  if n < 2:
-    return 1
-  
-  if n == 2:
-    return 2
-
-  if cache[n] > 2: # If more than 2 ways, return the value of cache
-    return cache[n]  # cache[n] is number of ways we can get to n
-
-  cache[n] = eating_cookies(n-1, cache) + eating_cookies(n-2, cache) + eating_cookies(n-3, cache)
-
-  return cache[n]
+  pass
 
 eating_cookies(5)
 
